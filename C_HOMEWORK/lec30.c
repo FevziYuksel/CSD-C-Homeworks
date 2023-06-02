@@ -86,10 +86,10 @@ int main(void)
 //	printf("\n\n");
 //	vertical_histogram(arr, SIZE);
 
-	enum cbool
+	typedef enum 
 	{
-		cfalse = 0, ctrue
-	};
+		false_t = 0, true_t
+	} bool_t;
 
 	char s[] = {'f', 'e', 'v', '\0'};
 	printf("%zu\n", sizeof(s));
