@@ -75,7 +75,13 @@
     <ClCompile Include="78.c">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="77.c">
+    <ClCompile Include="43.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="42.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="76.c">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

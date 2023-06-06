@@ -28,6 +28,8 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="41.c" />
+    <ClCompile Include="42.c" />
+    <ClCompile Include="43.c" />
     <ClCompile Include="48.c" />
     <ClCompile Include="49.c" />
     <ClCompile Include="50.c" />
@@ -37,7 +39,7 @@
     <ClCompile Include="54.c" />
     <ClCompile Include="56.c" />
     <ClCompile Include="57.c" />
-    <ClCompile Include="77.c" />
+    <ClCompile Include="76.c" />
     <ClCompile Include="78.c" />
     <ClCompile Include="80.c" />
     <ClCompile Include="81.c" />

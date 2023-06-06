@@ -1,11 +1,16 @@
 #include "f_utility.h"
 
 
+int isleap(int year)
+{
+	return (year % 4 == 0 && year % 100 != 0) || year % 400 == 0;
+}
+
+
 void print_binary(unsigned int number)
 {
-	if (number >> 1) {
+	if (number >> 1) 
 		print_binary(number >> 1);
-	}
 	putc((number & 1) ? '1' : '0', stdout);
 }
 
@@ -29,10 +34,8 @@ int find_max_index(const int* arr, const size_t size)
 {
 	int max = 0;
 	for (int i = 0; i < size; ++i)
-	{
 		if (arr[i] > arr[max])
 			max = i;
-	}
 	return max;
 }
 
@@ -40,10 +43,8 @@ int find_max(const int* arr, const size_t size)
 {
 	int max = 0;
 	for (int i = 0; i < size; ++i)
-	{
 		if (arr[i] > max)
 			max = arr[i];
-	}
 	return max;
 }
 
@@ -191,11 +192,8 @@ void randomize(void)
 void set_random_array(int* arr, const size_t size)
 {
 	for (int i = 0; i < size; i++)
-	{
-		arr[i] = rand() % 1000;
-	}
+		arr[i] = (rand() % 10) * (rand() % 3 ? -1 : 1);
 }
-
 
 void print_array(const int* arr, const size_t size)
 {

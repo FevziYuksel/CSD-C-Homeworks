@@ -18,6 +18,7 @@ int is_superprime(int n);
 int knut(void);
 
 void test41(void);
+void test43(void);
 void test50(void);
 void test52(void);
 void test53(void);

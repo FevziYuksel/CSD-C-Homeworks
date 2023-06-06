@@ -6,7 +6,7 @@
 #include <math.h>
 #include <time.h>
 #include <assert.h>
-//#include <limits.h>
+#include <limits.h>
 
 typedef long long int64;
 typedef struct tm sys_time;
@@ -19,11 +19,14 @@ typedef struct tm sys_time;
 #define LOG(x)  do x; while(0) //scope espace trick without ()
 #endif // LOG
 
-#define MAX(a, b) ((a) > (b) ? (a) : (b))
-#define MIN(a, b) ((a) < (b) ? (a) : (b))
-#define CUBE(x) ((x) * (x) * (x))
-#define ASIZE(arr) (sizeof(arr) / sizeof(arr[0])) // sizeof(int) non generic
-#define RANDOMIZE() srand(time(NULL));
+#define MAX(x, y)		((x) > (y) ? (x) : (y))
+#define MIN(x, y)		((x) < (y) ? (x) : (y))
+#define ABS(x)			((x) > 0 ? (x) : (-x))
+#define SIGNUM(x)		((x) < 0 ? -1 : ((x) > 0 ? 1 : 0))
+#define SQRT(x)			((x) * (x))
+#define CUBE(x)			((x) * (x) * (x))
+#define ASIZE(arr)		(sizeof(arr) / sizeof(arr[0])) // sizeof(int) non generic
+#define RANDOMIZE()		srand(time(NULL));
 
 #define STR(x) #x
 #define UNI(a, b) a##b
@@ -38,7 +41,7 @@ return a > b ? a : b;\
 
 #define SWAP_GENERIC(type) void swap_##type(type* x, type* y) \
 {\
-	printf(#type "\n"); \
+	printf(#type " type swap function\n"); \
 	type temp = *x; \
 	*x = *y; \
 	*y = temp; \
@@ -61,7 +64,7 @@ typedef enum
 	success = 0, memory
 }error;
 
-
+int isleap(int year);
 void print_binary(unsigned int number);
 void swap(int* x, int* y);
 void xor_swap(int* x, int* y);

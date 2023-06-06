@@ -2,9 +2,7 @@
 
 int is_harshad(int n)
 {
-	return n < 0
-		? 0
-		: n % sum_digit(n);
+	return n < 0 ? 0 : n % sum_digit(n);
 }
 
 
