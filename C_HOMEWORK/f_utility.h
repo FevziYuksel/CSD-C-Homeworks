@@ -16,20 +16,19 @@ typedef struct tm sys_time;
 #if LOG /*&& !defined LOG*/
 #define LOG(x) ((void)printf("$LOG : %d\n", x))
 #else
-#define LOG(x)  (x)
+#define LOG(x)  do x; while(0) //scope espace trick without ()
 #endif // LOG
 
 #define MAX(a, b) ((a) > (b) ? (a) : (b))
 #define MIN(a, b) ((a) < (b) ? (a) : (b))
 #define CUBE(x) ((x) * (x) * (x))
-#define SIZE_INT(arr) (sizeof(arr) / sizeof(int))
-
-#define SIZE_ARR(arr, T) (sizeof)  
+#define ASIZE(arr) (sizeof(arr) / sizeof(arr[0])) // sizeof(int) non generic
+#define RANDOMIZE() srand(time(NULL));
 
 #define STR(x) #x
 #define UNI(a, b) a##b
 #if !defined LOG && defined ERG
-void log_varg(char* str, ...);
+//void log_varg(char* str, ...);
 #endif
 
 #define GEN_MAX_FN(T) T max_##T(T a, T b) \
@@ -37,37 +36,35 @@ void log_varg(char* str, ...);
 return a > b ? a : b;\
 }
 
-//#undef LOG //macroyu sil
-
-/*
-void assert_that(int cond)
-{
-	assert(cond);
+#define SWAP_GENERIC(type) void swap_##type(type* x, type* y) \
+{\
+	printf(#type "\n"); \
+	type temp = *x; \
+	*x = *y; \
+	*y = temp; \
 }
 
-void print_predefined(void)
+#define BYTE_TO_BINARY_PATTERN "%c%c%c%c%c%c%c%c"
+#define BYTE_TO_BINARY(byte)  \
+  ((byte) & 0x80 ? '1' : '0'), \
+  ((byte) & 0x40 ? '1' : '0'), \
+  ((byte) & 0x40 ? '1' : '0'), \
+  ((byte) & 0x20 ? '1' : '0'), \
+  ((byte) & 0x10 ? '1' : '0'), \
+  ((byte) & 0x08 ? '1' : '0'), \
+  ((byte) & 0x04 ? '1' : '0'), \
+  ((byte) & 0x02 ? '1' : '0'), \
+  ((byte) & 0x01 ? '1' : '0') 
+
+typedef enum
 {
-	printf("%d\n", __LINE__);
-	printf("%s\n", __DATE__);
-	printf("%s\n", __TIME__);
-	printf("%s\n", __FILE__);
+	success = 0, memory
+}error;
 
-#ifdef _cplusplus__ 
-#error ERROR C++ COMPILER
-#elif __STDC__
-#if LOG
-#define LOG(x) ((void)printf("$LOG : %d\n", x))
-#else
-#define LOG(x)  (x)
-#endif // LOG
-#endif
 
-#line 666 "devil.c"
-	abort();
-	exit(0);
-}
-*/
-
+void print_binary(unsigned int number);
+void swap(int* x, int* y);
+void xor_swap(int* x, int* y);
 int find_max_index(const int* arr, const size_t size);
 int find_max(const int* arr, const size_t size);
 int f_pow(int n, int t);
@@ -84,10 +81,12 @@ int is_armstrong(int n);
 void randomize(void);
 void set_random_array(int* arr, const size_t size);
 void print_array(const int* arr, const size_t size);
-
-
-int knut(void);
 int print_distinct(const int* arr, const size_t size);
+void bubblesort(int* arr, const size_t size, int (*compare) (int, int));
+void binary_search(const int* arr, const size_t size, const int value);
+
+
+
 
 #endif // _F_UTILITY_
 

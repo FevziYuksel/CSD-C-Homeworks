@@ -1,38 +1,70 @@
 #include <stdio.h>
 #include <string.h>
 #include "f_utility.h"
-#ifndef RANDOMIZE
+
 #include <stdlib.h>
 #include <time.h>
-#define RANDOMIZE() srand(time(NULL));
 
 
+
+//int print_distinct(const int* arr, const size_t size)
+//{
+//	int flag = 1;
+//
+//	for (int i = 0; i < size; ++i)
+//	{
+//		flag = 1;
+//		for (int j = 0; j < size; ++j)
+//		{
+//			if (i != j && arr[i] == arr[j])
+//			{
+//				flag = 0;
+//				break;
+//			}
+//		}
+//
+//		if (flag)
+//			printf("%d ", arr[i]);
+//	}
+//
+//	return 0;
+//}
+
+//Without flag var
 int print_distinct(const int* arr, const size_t size)
 {
-	int flag = 1;
 
 	for (int i = 0; i < size; ++i)
 	{
-		flag = 1;
-		for (int j = 0; j < size; ++j)
-		{
+		int j;
+		for (j = 0; j < size; ++j)
 			if (i != j && arr[i] == arr[j])
-			{
-				flag = 0;
 				break;
-			}
-		}
 
-		if (flag)
+		if (j == size)
 			printf("%d ", arr[i]);
 	}
+	putchar('\n');
 
 	return 0;
 }
 
-int print_distinct2(int* arr, const size_t size)
+int pddynamic(const int* arr, const size_t size)
 {
-	int* temp = (int*)malloc(size * sizeof(int));
+	int* lookup = (int*) malloc(sizeof(int) * find_max(arr, size)); //int -> long long int
+	if (lookup == NULL)
+		return memory;
+
+	for (int i = 0; i < size; ++i)
+	{
+		if (lookup[arr[i]] != arr[i])
+		{
+			printf("%d ", arr[i]);
+			lookup[arr[i]] = arr[i];
+		}
+	}
+	free(lookup);
+
 	return 0;
 }
 
@@ -70,34 +102,8 @@ int vertical_histogram(int* arr, const size_t size)
 	return 0;
 }
 
-/*
-int main(void)
-{
-//#define SIZE 10
-//
-//	int arr[SIZE];
-//
-//	RANDOMIZE();
-//	for (int i = 0; i < SIZE; ++i)
-//	{
-//		arr[i] = rand() % 20 + 1;
-//		printf("%d ", arr[i]);
-//	}
-//	printf("\n\n");
-//	vertical_histogram(arr, SIZE);
 
-	typedef enum 
-	{
-		false_t = 0, true_t
-	} bool_t;
 
-	char s[] = {'f', 'e', 'v', '\0'};
-	printf("%zu\n", sizeof(s));
-	puts(s);
-	puts("fev");
-	char* a = "fev";
-	printf("%s\n", !strcmp(s, a) ? "true" : "false");
-	return 0;
-}
-*/
-#endif // !RANDOMIZE
+
+
+

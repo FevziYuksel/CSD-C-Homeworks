@@ -1,7 +1,7 @@
 #include <stdio.h>
 
 
-int main3()
+int test49()
 {
 	int i = 1;
 	do

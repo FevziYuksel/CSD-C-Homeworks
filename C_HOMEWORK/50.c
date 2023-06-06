@@ -71,6 +71,7 @@ int find_ramanujan(int start)
         if (is_ramanujan(i))
             PRINT(i);
     }
+    return 0;
 
 }
 

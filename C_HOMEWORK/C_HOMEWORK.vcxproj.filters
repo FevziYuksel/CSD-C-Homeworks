@@ -57,13 +57,25 @@
     <ClCompile Include="gcd.c">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="lec30.c">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="main.c">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="orn.c">
+      <Filter>Resource Files</Filter>
+    </ClCompile>
+    <ClCompile Include="lec30.c">
+      <Filter>Resource Files</Filter>
+    </ClCompile>
+    <ClCompile Include="81.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="80.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="78.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="77.c">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
@@ -75,6 +87,9 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="divisors.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="list.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

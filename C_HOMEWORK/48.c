@@ -1,5 +1,5 @@
 #include "f_utility.h"
-#define LOG(x) ((void)printf("$LOG : %d\n", x))
+
 
 
 static int test[] = {
@@ -17,6 +17,7 @@ int is_prime(int n)
 	for (int i = 3; i < n; i += 2)
 		if (n % i == 0)
 			return 0;
+	
 	return 1;
 }
 
@@ -39,7 +40,7 @@ int is_superprime(int n)
 
 int is_superprime_dynamic(int n, int* lookup, size_t size)
 {
-
+	//binary search
 }
 
 void test48()
@@ -50,20 +51,7 @@ void test48()
 		printf("%d : %d\n", c++, is_superprime(test[i]));
 	}
 }
-/*
-int main(int argc, char* argv[])
-{
-	//LOG(is_superprime(6));
 
-	int* lookup = (int*)calloc(50, sizeof(int));
-
-
-
-	test48();
-
-	return 0;
-}
-*/
 
 
 
