@@ -26,13 +26,6 @@ typedef struct _list
 }list;
 
 
-int init_list(const size_t size)
-{
-	list* list = malloc(sizeof(list));
-	list->size = 0;
-
-	return 0;
-}
 
 
 

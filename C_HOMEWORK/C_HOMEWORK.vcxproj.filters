@@ -84,6 +84,12 @@
     <ClCompile Include="76.c">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="lec32.c">
+      <Filter>Resource Files</Filter>
+    </ClCompile>
+    <ClCompile Include="lec31.c">
+      <Filter>Resource Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="homework.h">

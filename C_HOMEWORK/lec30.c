@@ -1,10 +1,4 @@
-#include <stdio.h>
-#include <string.h>
 #include "f_utility.h"
-
-#include <stdlib.h>
-#include <time.h>
-
 
 
 //int print_distinct(const int* arr, const size_t size)

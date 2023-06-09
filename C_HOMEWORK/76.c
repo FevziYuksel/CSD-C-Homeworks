@@ -40,7 +40,7 @@ int max_seq(int* arr, const size_t size)
 }
 
 
-int main(void)
+int main2(void)
 {
 	//int arr[] = { 3, 4, -8, 1, 7, -2 };
 	int arr[] = { -5, -4, 0, 11, -8, 9, 10, -75 };
