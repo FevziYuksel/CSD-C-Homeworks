@@ -64,7 +64,7 @@ namespace fy {
 
 }
 
-int main()
+int maincpp()
 {
 	//Copy Elision
 	auto vec = fy::random_vector<int>(-50, 50, 1);
@@ -74,9 +74,6 @@ int main()
 	////fy::bubblesort<int>(vec, comperator);
 	//
 	//fy::print_arr<int>(vec);
-
-
-	
 
 	return 0;
 }
