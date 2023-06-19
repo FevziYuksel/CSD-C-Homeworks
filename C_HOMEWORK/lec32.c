@@ -47,3 +47,32 @@ void safe_reverse_string(const char* str, char reversed[])
 }
 
 
+
+int main(int argc, char* argv[])
+{
+	char str[] = "fevzi";
+	char rev[10];
+	//printf("%d\n", strlen(str) == f_strlen(str));
+	reverse_string_safe(str, rev);
+	printf("%s\n", rev);
+
+	return 0;
+}int main(int argc, char* argv[])
+{
+	char str[] = "fevzi";
+	char rev[10];
+	//printf("%d\n", strlen(str) == f_strlen(str));
+	reverse_string_safe(str, rev);
+	printf("%s\n", rev);
+
+	return 0;
+}int main(int argc, char* argv[])
+{
+	char str[] = "fevzi";
+	char rev[10];
+	//printf("%d\n", strlen(str) == f_strlen(str));
+	reverse_string_safe(str, rev);
+	printf("%s\n", rev);
+
+	return 0;
+}

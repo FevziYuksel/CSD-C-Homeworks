@@ -2,42 +2,23 @@
 #include "homework.h"
 #include "list.h"
 
-extern const int a;
-
-extern ptrdiff_t diff;
-
-inline void test(int* in, int* out)
+int words(const char* str)
 {
-	//if (sizeof(in) > sizeof(int))
-	//	exit(EXIT_FAILURE);
+	int begin = 1, c = 0;
 
-	printf("success");
-}
-
-void print_array5(const int* p, int size, int i) 
-{ 
-	printf("%d ", (*p + i));
-	i < size ? print_array(p, size, i + 1) : 0; 
-}
-void test_arr_ptr(const int* arr)
-{
-	for (size_t i = 0; i < sizeof(arr) / sizeof(arr[0]); i++)
+	for (int i = 0; i != '\0'; i++)
 	{
-		printf("%d ", arr[i]);
+		
+
 	}
+
+
+	return 0;
 }
 
 
-//int main(void)
+//int main(int argc, char* argv[])
 //{
-//	int arr[5] = { 0, 1, 2, 3, 4 }; 
-//	size_t size = 5;
-//	
-//	//for (size_t i = 0; i < sizeof(arr) / sizeof(arr[0]); i++)
-//	//{
-//	//	printf("%d ", arr[i]);
-//	//}
-//
-//
+//	return 0;
 //}
 
