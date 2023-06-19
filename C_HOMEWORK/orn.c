@@ -43,24 +43,24 @@ typedef struct
 {
 	struct tm now;
 
-	void (*delete)(f_time_t* f_time);
+	void (*delete)(f_time_t* fy_time);
 
 	void (*now) (f_time_t* this);
 
-} f_time_t;
+} fy_time_t;
 
 
-f_time_t* f_time_new(void)
+f_time_t* fy_time_new(void)
 {
-	f_time_t* f_time = (f_time_t*)malloc(sizeof(f_time_t));
+	f_time_t* fy_time = (f_time_t*)malloc(sizeof(f_time_t));
 	if (!f_time)
 		return NULL;
 	f_time -> delete =
 
-	return f_time;
+	return fy_time;
 }
 
-void f_time_delete(f_time_t* f_time)
+void fy_time_delete(f_time_t* fy_time)
 {
 	free(f_time);
 }

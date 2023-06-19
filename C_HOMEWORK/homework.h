@@ -1,7 +1,7 @@
 #ifndef _C_HOMEWORK_
 #define _C_HOMEWORK_
 
-#include "f_utility.h"
+#include "fy_utility.h"
 #include "divisors.h"
 
 int lcd(int a, int b);

@@ -68,10 +68,10 @@ int isleap(int year);
 void print_binary(unsigned int number);
 void swap(int* x, int* y);
 void xor_swap(int* x, int* y);
-int find_max_index(const int* arr, const size_t size);
-int find_max(const int* arr, const size_t size);
-int f_pow(int n, int t);
-long long f_pow64(long long n, long long t);
+int find_max_index(const int* arr, size_t size);
+int find_max(const int* arr, size_t size);
+int fy_pow(int n, int t);
+long long fy_pow64(long long n, long long t);
 int ndigit(int n);
 long long ndigit64(long long n);
 int sum_digit(int n);
@@ -82,12 +82,12 @@ int get_digital_root(int val);
 int is_harshad(int val);
 int is_armstrong(int n);
 void randomize(void);
-void set_random_array(int* arr, const size_t size);
-void print_array(const int* arr, const size_t size);
+void set_random_array(int* arr, size_t size);
+void print_array(const int* arr, size_t size);
 int is_palindrome(const char* word);
-int print_distinct(const int* arr, const size_t size);
-void bubblesort(int* arr, const size_t size, int (*compare) (int, int));
-void binary_search(const int* arr, const size_t size, const int value);
+int print_distinct(const int* arr, size_t size);
+void bubblesort(int* arr, size_t size, int (*compare) (int, int));
+int binary_search(const int* arr, size_t size, int value);
 
 
 

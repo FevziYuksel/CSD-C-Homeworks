@@ -3,10 +3,10 @@
 
 int armstrong(int n, int t)
 {
-    int res = f_pow(n % 10, t);
+    int res = fy_pow(n % 10, t);
 
     while (n /= 10)
-        res += f_pow(n % 10, t);
+        res += fy_pow(n % 10, t);
 
     return res;
 }
@@ -21,7 +21,7 @@ int armstrong_recursive(int n, int t)
 {
     if (!n) return 0;
 
-    return f_pow(n % 10, t) + armstrong(n, t);
+    return fy_pow(n % 10, t) + armstrong(n, t);
 }
 
 

@@ -1,4 +1,4 @@
-#include "f_utility.h"
+#include "fy_utility.h"
 
 
 int isleap(int year)
@@ -30,7 +30,7 @@ void xor_swap(int* x, int* y)
 	*x ^= *y;
 }
 
-int find_max_index(const int* arr, const size_t size)
+int find_max_index(const int* arr, size_t size)
 {
 	int max = 0;
 	for (int i = 0; i < size; ++i)
@@ -39,7 +39,7 @@ int find_max_index(const int* arr, const size_t size)
 	return max;
 }
 
-int find_max(const int* arr, const size_t size)
+int find_max(const int* arr, size_t size)
 {
 	int max = 0;
 	for (int i = 0; i < size; ++i)
@@ -48,7 +48,7 @@ int find_max(const int* arr, const size_t size)
 	return max;
 }
 
-int f_pow(int n, int t)
+int fy_pow(int n, int t)
 {
     int r = 1;
     while (t--)
@@ -56,7 +56,7 @@ int f_pow(int n, int t)
     return r;
 }
 
-long long f_pow64(long long n, long long t)
+long long fy_pow64(long long n, long long t)
 {
     long long r = 1;
     while (t--)

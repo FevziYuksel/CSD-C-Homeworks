@@ -1,4 +1,4 @@
-#include "f_utility.h"
+#include "fy_utility.h"
 
 #define PRINT(x) (printf("result is %d\n", x))
 #define LOOKUP(x, lookup) (lookup[x] != 0 ? lookup[x] : (lookup[x] = CUBE(x)))

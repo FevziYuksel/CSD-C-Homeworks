@@ -1,8 +1,8 @@
-#include "f_utility.h"
+#include "fy_utility.h"
 
 ///maximum subsequence expected O(n)
 
-int max_seq(int* arr, const size_t size)
+int max_seq(int* arr, size_t size)
 {
 	int sum = 0, max = arr[0], idx = 0, step = 0;
 
@@ -36,22 +36,5 @@ int max_seq(int* arr, const size_t size)
 	}
 
 	printf("\n\n");
-	return 0;
-}
-
-
-int main2(void)
-{
-	//int arr[] = { 3, 4, -8, 1, 7, -2 };
-	int arr[] = { -5, -4, 0, 11, -8, 9, 10, -75 };
-
-	//randomize();
-	//set_random_array(arr, ASIZE(arr), 10);
-	//print_array(arr, ASIZE(arr));
-	//putchar('\n');
-
-	max_seq(arr, ASIZE(arr));
-
-
 	return 0;
 }

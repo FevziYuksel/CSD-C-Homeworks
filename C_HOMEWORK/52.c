@@ -1,4 +1,4 @@
-#include "f_utility.h"
+#include "fy_utility.h"
 
 int smith_number(int n)
 {
