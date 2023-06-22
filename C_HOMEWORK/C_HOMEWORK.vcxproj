@@ -57,6 +57,7 @@
     <ClCompile Include="orn.c" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="bubblesort.hpp" />
     <ClInclude Include="divisors.h" />
     <ClInclude Include="fy_utility.h" />
     <ClInclude Include="homework.h" />
