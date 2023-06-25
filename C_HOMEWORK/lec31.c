@@ -1,4 +1,4 @@
-#include "f_utility.h"
+#include "fy_utility.h"
 
 void randomize(void)
 {
@@ -23,6 +23,33 @@ void print_array(const int* arr, size_t size)
 			printf(", ");
 	}
 	printf("]\n");
+//void print_array(const int* arr, size_t size)
+//{
+//	putchar('[');
+//	for (int i = 0; i < size; i++)
+//	{
+//		printf("%d", arr[i]);
+//		if (i != size - 1)
+//			printf(", ");
+//	}
+//	putchar('[');
+//	putchar('\n');
+//}
+
+void print_array(const int* arr, size_t size)
+{
+	putchar('[');
+	while (size--)
+		printf("%d, ", *arr++);
+
+	putchar(']');
+	putchar('\n');
+}
+
+void copy_array(int* pdest, const int* psource, size_t n)
+{
+	while (n--)
+		*pdest++ = *psource++;
 }
 
 
@@ -63,14 +90,39 @@ void reverse_array(int* arr, size_t size)
 	}
 }
 
-void binary_search(const int* arr, size_t size, int value)
+int binary_search(const int* arr, size_t size, int value)
 {
-	size_t begin = 0, end = size - 1;
+	size_t begin = 0, end = size - 1, mid = (end - begin) / 2;
 
+	bubblesort(arr, size, comparator);
 
+	while (mid > begin && mid < end )
+	{
+		if (value == arr[mid])
+			return mid;
+		else if (value < arr[mid])
+			mid = (mid - begin) / 2;
+		else if (value > arr[mid])
+			mid = (end - mid) / 2;
+
+		printf("%zu\n", mid);
+	}
+	return -1;
 }
 
 void merge_arrays(const int* larr, size_t lsize, const int* rarr, size_t rsize)
 {
 
 }
+
+//int main(void)
+//{
+//	int arr[] = { 1, 2, 3, 5, 24, 64, 23 };
+//	const size_t size = ASIZE(arr);
+//	int res = binary_search(arr, size, 0);
+//
+//	print_array(arr, size);
+//	printf("%d\n", res);
+//
+//	ptrdiff_t diff = &arr[0] - &arr[1];
+//}

@@ -1,5 +1,5 @@
 #include <stdio.h>
-#include "f_utility.h"
+#include "fy_utility.h"
 
 #define SIZE 10
 

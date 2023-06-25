@@ -51,7 +51,7 @@
     <ClCompile Include="donald_knut.c">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="f_utility.c">
+    <ClCompile Include="fy_utility.c">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="gcd.c">
@@ -78,9 +78,6 @@
     <ClCompile Include="43.c">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="42.c">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="76.c">
       <Filter>Source Files</Filter>
     </ClCompile>
@@ -90,18 +87,33 @@
     <ClCompile Include="lec31.c">
       <Filter>Resource Files</Filter>
     </ClCompile>
+    <ClCompile Include="75.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="74.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="c_oop.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="bubblesort.cpp">
+      <Filter>Resource Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="homework.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="f_utility.h">
+    <ClInclude Include="fy_utility.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="divisors.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="list.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="bubblesort.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

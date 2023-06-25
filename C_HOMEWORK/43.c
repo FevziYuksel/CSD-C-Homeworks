@@ -1,4 +1,4 @@
-#include "f_utility.h"
+#include "fy_utility.h"
 
 int days_in_february(int year) 
 {
@@ -10,22 +10,22 @@ int days_in_year(int year)
     return isleap(year) ? 366 : 365;
 }
 
-int f_max(int x, int y) 
+int fy_max(int x, int y) 
 {
     return x > y ? x : y;
 }
 
-int f_min(int x, int y) 
+int fy_min(int x, int y) 
 {
     return x < y ? x : y;
 }
 
-int f_abs(int x) 
+int fy_abs(int x) 
 {
     return x < 0 ? -x : x;
 }
 
-int f_signum(int x)
+int fy_signum(int x)
 {
     return x > 0 ? 1 : (x < 0 ? -1 : 0);
 }
@@ -37,10 +37,10 @@ void test43(void)
     int year_days = days_in_year(year);
     int x = -5;
     int y = 10;
-    int max_value = f_max(x, y);
-    int min_value = f_min(x, y);
-    int abs_value = f_abs(x);
-    int sign_value = f_signum(x);
+    int max_value = fy_max(x, y);
+    int min_value = fy_min(x, y);
+    int abs_value = fy_abs(x);
+    int sign_value = fy_signum(x);
 
     printf("Subat ayinin gun sayisi: %d\n", february_days);
     printf("Yilin gun sayisi: %d\n", year_days);
