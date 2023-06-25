@@ -7,13 +7,13 @@ void randomize(void)
 }
 
 
-void set_random_array(int* arr, const size_t size)
+void set_random_array(int* arr, size_t size)
 {
 	for (int i = 0; i < size; i++)
-		arr[i] = (rand() % 10) * (rand() % 3 ? -1 : 1);
+		arr[i] = rand() % 10;
 }
 
-void print_array(const int* arr, const size_t size)
+void print_array(const int* arr, size_t size)
 {
 	printf("[");
 	for (int i = 0; i < size; i++)
@@ -32,7 +32,7 @@ int comparator(int x, int y)
 	return x > y;
 }
 
-void bubblesort(int* arr, const size_t size, int (*compare) (int, int))
+void bubblesort(int* arr, size_t size, int (*compare) (int, int))
 {
 	if (compare == NULL)
 		compare = comparator;
@@ -55,7 +55,7 @@ void bubblesort(int* arr, const size_t size, int (*compare) (int, int))
 	}
 }
 
-void reverse_array(int* arr, const size_t size)
+void reverse_array(int* arr, size_t size)
 {
 	for (int i = 0; i < size / 2; i++)
 	{
@@ -63,14 +63,14 @@ void reverse_array(int* arr, const size_t size)
 	}
 }
 
-void binary_search(const int* arr, const size_t size, const int value)
+void binary_search(const int* arr, size_t size, int value)
 {
 	size_t begin = 0, end = size - 1;
 
 
 }
 
-void merge_arrays(const int* larr, const size_t lsize, const int* rarr, const size_t rsize)
+void merge_arrays(const int* larr, size_t lsize, const int* rarr, size_t rsize)
 {
 
 }

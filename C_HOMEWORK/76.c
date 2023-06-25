@@ -1,34 +1,65 @@
 #include "f_utility.h"
 
-///maximum subsequence expected O(n)
+//Depricated
+//int max_seq(const int* arr, size_t size)
+//{
+//	int sum = 0, max = arr[0], idx = 0, step = 0;
+//
+//	for (int i = 1; i < size; i++) //step size
+//	{
+//		for (int j = 0; j < size + 1 - i; j++) //step count
+//		{
+//			sum = 0;
+//			for (int k = j; k < size && k < j + i; k++) //step sum
+//			{
+//				sum += arr[k];
+//				printf("%d ", arr[k]);
+//			}
+//			printf("|");
+//
+//			if (sum > max)
+//			{
+//				step = i;
+//				idx = j;
+//				max = sum;
+//				//printf("step size = %d idx = %d max = %d\n", step, idx, max);
+//			}
+//		}
+//		printf("\n");
+//	}
+//	printf("max = %d\n", max);
+//
+//	for (int i = idx; i < idx + step; i++)
+//	{
+//		printf("%d ", arr[i]);
+//	}
+//
+//	printf("\n\n");
+//	return max;
+//}
 
-int max_seq(int* arr, const size_t size)
+//Kadane's algorithm
+int max_seq(const int* arr, size_t size)
 {
 	int sum = 0, max = arr[0], idx = 0, step = 0;
 
-	for (int i = 1; i < size; i++) //step size
+	for (int i = 1; i < size; i++) 
 	{
-		for (int j = 0; j < size + 1 - i; j++) //step count
+		sum += arr[i];
+
+		if (sum > max)
+		{
+			max = sum;
+			idx = i;
+		}
+			
+		if (sum < 0)
 		{
 			sum = 0;
-			for (int k = j; k < size && k < j + i; k++) //step sum
-			{
-				sum += arr[k];
-				printf("%d ", arr[k]);
-			}
-			printf("|");
-
-			if (sum > max)
-			{
-				step = i;
-				idx = j;
-				max = sum;
-				//printf("step size = %d idx = %d max = %d\n", step, idx, max);
-			}
+			step = i;
 		}
-		printf("\n");
+			
 	}
-	printf("max = %d\n", max);
 
 	for (int i = idx; i < idx + step; i++)
 	{
@@ -36,8 +67,9 @@ int max_seq(int* arr, const size_t size)
 	}
 
 	printf("\n\n");
-	return 0;
+	return max;
 }
+
 
 
 int main2(void)

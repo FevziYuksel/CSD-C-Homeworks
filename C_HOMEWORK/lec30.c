@@ -25,7 +25,7 @@
 //}
 
 //Without flag var
-int print_distinct(const int* arr, const size_t size)
+int print_distinct(const int* arr, size_t size)
 {
 
 	for (int i = 0; i < size; ++i)
@@ -43,7 +43,7 @@ int print_distinct(const int* arr, const size_t size)
 	return 0;
 }
 
-int pddynamic(const int* arr, const size_t size)
+int pddynamic(const int* arr, size_t size)
 {
 	int* lookup = (int*) malloc(sizeof(int) * find_max(arr, size)); //int -> long long int
 	if (lookup == NULL)
@@ -62,7 +62,7 @@ int pddynamic(const int* arr, const size_t size)
 	return 0;
 }
 
-int horizontal_histogram(int* arr, const size_t size)
+int horizontal_histogram(int* arr, size_t size)
 {
 	for (int i = 0; i < size; ++i)
 	{
@@ -74,7 +74,7 @@ int horizontal_histogram(int* arr, const size_t size)
 	return 0;
 }
 
-int vertical_histogram(int* arr, const size_t size)
+int vertical_histogram(int* arr, size_t size)
 {
 	int max, height;
 
@@ -84,15 +84,32 @@ int vertical_histogram(int* arr, const size_t size)
 	{
 		for (int j = 0; j < size; ++j)
 		{
-			if (arr[j] >= max)
+			if (i == 0)
+				printf("%d ", arr[j]);
+			else if (arr[j] >= max)
 				printf("* ");
 			else
-				putchar("  ");
+				printf("  ");
 		}
 		--max;
 		putchar('\n');
 	}
 	printf("\n\n");
+	return 0;
+}
+
+
+#define SIZE 20
+
+int main(void)
+{
+	int arr[SIZE];
+
+	RANDOMIZE();
+	set_random_array(arr, SIZE);
+	vertical_histogram(arr, SIZE);
+
+
 	return 0;
 }
 
