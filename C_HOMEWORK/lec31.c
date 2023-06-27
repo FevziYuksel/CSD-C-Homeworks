@@ -10,9 +10,19 @@ void randomize(void)
 void set_random_array(int* arr, size_t size)
 {
 	for (int i = 0; i < size; i++)
-		arr[i] = (rand() % 10) * (rand() % 3 ? -1 : 1);
+		arr[i] = rand() % 10;
 }
 
+void print_array(const int* arr, size_t size)
+{
+	printf("[");
+	for (int i = 0; i < size; i++)
+	{
+		printf("%d", arr[i]);
+		if (i != size - 1)
+			printf(", ");
+	}
+	printf("]\n");
 //void print_array(const int* arr, size_t size)
 //{
 //	putchar('[');
