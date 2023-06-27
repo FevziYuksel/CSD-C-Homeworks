@@ -48,7 +48,6 @@
     <ClCompile Include="c_oop.c" />
     <ClCompile Include="divisors.c" />
     <ClCompile Include="donald_knut.c" />
-    <ClCompile Include="fix.cpp" />
     <ClCompile Include="fy_utility.c" />
     <ClCompile Include="gcd.c" />
     <ClCompile Include="lec30.c" />

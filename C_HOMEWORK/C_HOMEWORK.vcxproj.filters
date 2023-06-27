@@ -99,9 +99,6 @@
     <ClCompile Include="bubblesort.cpp">
       <Filter>Resource Files</Filter>
     </ClCompile>
-    <ClCompile Include="fix.cpp">
-      <Filter>Resource Files</Filter>
-    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="homework.h">
