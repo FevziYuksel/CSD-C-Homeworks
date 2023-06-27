@@ -105,23 +105,23 @@ namespace fy {
 	}
 
 }
-
-int main()
-{
-	using uint32 = unsigned int;
-
-	auto vec = fy::random_vector<uint32>(-50, 50, 10);
-
-	fy::bubblesort<uint32>(vec);
-	fy::bubblesort<uint32>(vec, [](uint32 x, uint32 y) {return x > y; });
-	fy::bubblesort<uint32>(vec, fy::comparator<uint32>());
-
-	fy::comparator<uint32> c;
-
-	fy::bubblesort<uint32>(vec, c);
-
-
-	fy::print_container<uint32, std::vector<uint32>::const_iterator>(vec.begin(), vec.end(), vec.size());
-
-	return 0;
-}
+//
+//int main()
+//{
+//	using uint32 = unsigned int;
+//
+//	auto vec = fy::random_vector<uint32>(-50, 50, 10);
+//
+//	fy::bubblesort<uint32>(vec);
+//	fy::bubblesort<uint32>(vec, [](uint32 x, uint32 y) {return x > y; });
+//	fy::bubblesort<uint32>(vec, fy::comparator<uint32>());
+//
+//	fy::comparator<uint32> c;
+//
+//	fy::bubblesort<uint32>(vec, c);
+//
+//
+//	fy::print_container<uint32, std::vector<uint32>::const_iterator>(vec.begin(), vec.end(), vec.size());
+//
+//	return 0;
+//}
