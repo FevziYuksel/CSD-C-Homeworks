@@ -11,12 +11,16 @@
 typedef long long int64;
 typedef struct tm sys_time;
 
+//typedef T a , b, c gibi durumlarda array ve ptr için hepsini o tipte yapar güvenlidir
+//typedef const T* MY_ARR[100] MY_ARR === const T* [100] && typedef int (*f)(int)  f === int *()(int)
+// typedef struct, enum, union {} NAME 
+
 //#define LOG 1 tanýmlanmadýysa otomatik 0
 
 #if LOG /*&& !defined LOG*/
 #define LOG(x) ((void)printf("$LOG : %d\n", x))
 #else
-#define LOG(x)  do x; while(0) //scope espace trick without ()
+#define LOG(x)			do x; while(0) //scope escape trick without ()
 #endif // LOG
 
 #define MAX(x, y)		((x) > (y) ? (x) : (y))

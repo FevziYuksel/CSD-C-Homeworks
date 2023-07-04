@@ -1,18 +1,32 @@
 #include "fy_utility.h"
+ 
+
+
+//int smith_number(int n)
+//{
+//	int sum = 0, div = 2; 
+//	while (n != 1)
+//	{
+//		while (n % div == 0)
+//		{
+//			sum += sum_digit(div);
+//			n /= div;
+//		}
+//		++div;
+//	}
+//	return sum;
+//}
 
 int smith_number(int n)
 {
 	int sum = 0;
-	int div = 2;
-	while (n != 1)
-	{
+	for (int div = 2; n != 1; ++div)
 		while (n % div == 0)
 		{
 			sum += sum_digit(div);
 			n /= div;
 		}
-		++div;
-	}
+	
 	return sum;
 }
 
@@ -31,4 +45,10 @@ void test52(void)
 
 	for (int i = 0; i < 49; i++)
 		printf("%d -> %d\n", i, is_smith(test[i]));
+}
+
+int main()
+{
+	test52();
+
 }
