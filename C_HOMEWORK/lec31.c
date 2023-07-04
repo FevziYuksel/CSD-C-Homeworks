@@ -13,16 +13,6 @@ void set_random_array(int* arr, size_t size)
 		arr[i] = rand() % 10;
 }
 
-void print_array(const int* arr, size_t size)
-{
-	printf("[");
-	for (int i = 0; i < size; i++)
-	{
-		printf("%d", arr[i]);
-		if (i != size - 1)
-			printf(", ");
-	}
-	printf("]\n");
 //void print_array(const int* arr, size_t size)
 //{
 //	putchar('[');
