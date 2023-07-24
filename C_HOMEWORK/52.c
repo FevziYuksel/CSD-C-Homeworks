@@ -47,8 +47,3 @@ void test52(void)
 		printf("%d -> %d\n", i, is_smith(test[i]));
 }
 
-int main()
-{
-	test52();
-
-}

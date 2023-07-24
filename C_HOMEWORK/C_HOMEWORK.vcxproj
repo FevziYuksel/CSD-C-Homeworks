@@ -53,8 +53,9 @@
     <ClCompile Include="lec30.c" />
     <ClCompile Include="lec31.c" />
     <ClCompile Include="lec32.c" />
-    <ClCompile Include="main.c" />
+    <ClCompile Include="deneme.cpp" />
     <ClCompile Include="orn.c" />
+    <ClCompile Include="Source.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="bubblesort.hpp" />
@@ -172,6 +173,7 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
+      <LanguageStandard>stdcpp20</LanguageStandard>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>

@@ -30,10 +30,10 @@ void xor_swap(int* x, int* y)
 	*x ^= *y;
 }
 
-int find_max_index(const int* arr, size_t size)
+int find_max_idx(const int* arr, size_t size)
 {
 	int max = 0;
-	for (int i = 0; i < size; ++i)
+	for (size_t i = 0; i < size; ++i)
 		if (arr[i] > arr[max])
 			max = i;
 	return max;
@@ -42,10 +42,79 @@ int find_max_index(const int* arr, size_t size)
 int find_max(const int* arr, size_t size)
 {
 	int max = 0;
-	for (int i = 0; i < size; ++i)
+	for (size_t i = 0; i < size; ++i)
 		if (arr[i] > max)
 			max = arr[i];
 	return max;
+}
+
+int* find_max_ptr(const int* arr, size_t size) //broken
+{
+	int* pmax = arr;
+
+	while (size--)
+	{
+		int a = *arr, b = *pmax;
+		if (*arr > *pmax)
+			pmax = arr++;
+	}
+
+
+	return pmax;
+}
+
+//int* find_max_ptr(const int* arr, size_t size)
+//{
+//	int* pmax = arr;
+//
+//	for (size_t i = 0; i < size; ++i)
+//		if (arr[i] > *pmax)
+//			pmax = arr + i;
+//	
+//	return pmax;
+//}
+
+int find_min_idx(const int* arr, size_t size)
+{
+	int min = 0;
+	for (size_t i = 0; i < size; ++i)
+		if (arr[i] > arr[min])
+			min = i;
+	return min;
+}
+
+int find_min(const int* arr, size_t size)
+{
+	int min = 0;
+	for (size_t i = 0; i < size; ++i)
+		if (arr[i] < min)
+			min = arr[i];
+	return min;
+}
+
+int* find_min_ptr(const int* arr, size_t size) //arr <- psource //broken
+{
+	int* pmin = arr;
+
+	while (size--)
+		if (*arr++ < *pmin)
+			pmin = arr;
+
+	return pmin;
+}
+
+void get_max_min(const int* arr, size_t size, int* pmax, int* pmin) //broken
+{
+	*pmin = *pmax = *arr;
+
+	while (size--)
+	{
+		if (*arr++ < *pmin)
+			*pmin = *arr;
+
+		if (*arr++ > *pmax)
+			*pmax = *arr;
+	}
 }
 
 int fy_pow(int n, int t)
@@ -182,4 +251,24 @@ long long calculate_longfactorial(long long n)
 	return sign ? - res : res;
 }
  
+int debug(int* arr)
+{
+	//int arr[5]; // bu olayý anlamadým array tipinde izin vermiyor
 
+	return *arr++;
+}
+
+int main(void)
+{
+	int arr[] = { 3, 5, 4, 2 };
+	int max, min;
+	//get_max_min(arr, ASIZE(arr), &max, &min);
+	//int a = find_max_ptr(arr, ASIZE(arr));
+
+	//printf("%d %d %d\n", max, min, a);
+
+	printf("%d\n", debug(arr));
+
+
+	return 0;
+}

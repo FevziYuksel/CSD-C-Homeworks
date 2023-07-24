@@ -57,7 +57,7 @@
     <ClCompile Include="gcd.c">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="main.c">
+    <ClCompile Include="deneme.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="orn.c">
@@ -98,6 +98,9 @@
     </ClCompile>
     <ClCompile Include="bubblesort.cpp">
       <Filter>Resource Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Source.cpp">
+      <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
