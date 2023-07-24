@@ -54,6 +54,7 @@
     <ClCompile Include="lec31.c" />
     <ClCompile Include="lec32.c" />
     <ClCompile Include="deneme.cpp" />
+    <ClCompile Include="main.c" />
     <ClCompile Include="orn.c" />
     <ClCompile Include="Source.cpp" />
   </ItemGroup>
