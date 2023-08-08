@@ -258,17 +258,17 @@ int debug(int* arr)
 	return *arr++;
 }
 
-int main(void)
-{
-	int arr[] = { 3, 5, 4, 2 };
-	int max, min;
-	//get_max_min(arr, ASIZE(arr), &max, &min);
-	//int a = find_max_ptr(arr, ASIZE(arr));
-
-	//printf("%d %d %d\n", max, min, a);
-
-	printf("%d\n", debug(arr));
-
-
-	return 0;
-}
+//int main(void)
+//{
+//	int arr[] = { 3, 5, 4, 2 };
+//	int max, min;
+//	//get_max_min(arr, ASIZE(arr), &max, &min);
+//	//int a = find_max_ptr(arr, ASIZE(arr));
+//
+//	//printf("%d %d %d\n", max, min, a);
+//
+//	printf("%d\n", debug(arr));
+//
+//
+//	return 0;
+//}

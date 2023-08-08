@@ -50,6 +50,7 @@
     <ClCompile Include="donald_knut.c" />
     <ClCompile Include="fy_utility.c" />
     <ClCompile Include="gcd.c" />
+    <ClCompile Include="goto.c" />
     <ClCompile Include="lec30.c" />
     <ClCompile Include="lec31.c" />
     <ClCompile Include="lec32.c" />
